@@ -4,7 +4,9 @@
     "description": "Projeto para buscar informações sobre animes",
     "main": "index.js",
     "scripts": {
-      "start": "node index.js"
+      "test": "echo \"Testes running...\"",
+      "build": "echo \"Build running...\"",
+      "deploy": "echo \"Deploy new build to clound server...\""
     },
     "keywords": ["anime", "API", "informações"],
     "author": "Seu Nome",

@@ -1,0 +1,22 @@
+name: Hello GitHub Actions #nome do teste
+
+# trigger (gatilho)
+on: 
+  push: # o que vai ativar esse gatilho
+    branches: ["main"] # e qual a brench que vai gerar o gatilho (["*"] todas as brenches)
+
+# define o que ele vai verificar
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    # passos a serem executados ex:(rodar o requerements, rodar o python, rodar o banco)
+    steps:
+        - uses: actions/checkout@v2 #entra na pasta do meu projeto
+        - uses: actions/setup-node@v1 #acessar tudo do node
+          with: #variavel, o node pede
+            node-version: 16
+        - run: npm install # roda comandos ex:(comandos linux)
+        - run: npm run test
+        - run: npm run build
+        - run: npm run deploy
